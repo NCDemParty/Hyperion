@@ -26,5 +26,5 @@ Ongoing, meetings and conventions are a permenant part of NCDP's structure so th
 - In accordance with the [North Carolina Democratic Party Plan of Organization](https://drive.google.com/file/d/0B3VE_bcfX7g1Nlkyd083TXp2aW8/view) it may be required to reduce the total allocated votes granted to a particular precinct/county if the district failed to elect their full voting strength, so it's important to provide the end user the ability to edit these on the fly. 
 
 ## Project Contributors
-@JessePresnell
-Matthew Pepper
+ @JessePresnell <br>
+ Matthew Pepper
