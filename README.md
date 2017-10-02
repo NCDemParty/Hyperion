@@ -25,6 +25,10 @@ Ongoing, meetings and conventions are a permenant part of NCDP's structure so th
 - Weights will be different for each type of convention (County, District, State), so this formula will have to change depending on the convention it's utilized for. Currently, it grabs the raw vote strength per person from the Votes Per Delegate column on the Check In sheet and multiplies that number by the total votes per candidate within that precinct. 
 - In accordance with the [North Carolina Democratic Party Plan of Organization](https://drive.google.com/file/d/0B3VE_bcfX7g1Nlkyd083TXp2aW8/view) it may be required to reduce the total allocated votes granted to a particular precinct/county if the district failed to elect their full voting strength, so it's important to provide the end user the ability to edit these on the fly. 
 
-## Project Contributors
- @JessePresnell <br>
- Matthew Pepper
+## Vote Strength Rules
+- County Conventions **North Carolina Democratic Party, Plan of Organization** § 5.00, art. 2 (Aug 2017)
+- District Conventions **North Carolina Democratic Party, Plan of Organization** § 6.00, art. 1 *Allocation of Votes* (Aug 2017)
+- State Conventions **North Carolina Democratic Party, Plan of Organization** § 6.00, art. 2 *Allocation of Votes* (Aug 2017)
+- State Executive Committee (Current) **North Carolina Democratic Party, Plan of Organization** § 4.00, art. 1 *Composition* (Feb 2017)
+- State Executive Committee (Future)  **North Carolina Democratic Party, Plan of Organization** § 4.00, art. 1 *Composition* (Aug 2017)
+ - Recently the State Executive Committee took action to change the SEC allocation formula, that action will take effect during the next SEC election
