@@ -1,11 +1,15 @@
-Sub Button_Click()
+Sub Button8_Click()
     ActiveWorkbook.Sheets.Add Before:=Worksheets(Worksheets.Count)
+    'i is the name of the County selected from the dropdown'
     i = Sheet1.Cells(8, 6).Value
+    'CandidateCount is the number of candidates on the ballot'
     CandidateCount = Sheet1.Cells(11, 8).Value
     CandidateStart = CandidateCount + 1
+    'Name the sheet based off of the election type'
     SheetName = Sheet1.Cells(13, 8).Value
     OrSheetName = Sheet1.Cells(13, 8).Value
     v = 0
+    'Add round counter for multiple races'
     For Each Sheet In Worksheets
         If SheetName = Sheet.Name Then
             SheetName = OrSheetName & "_Ballot" & v
@@ -17,6 +21,7 @@ Sub Button_Click()
     ActiveSheet.Cells(CandidateCount + 3, 1).Value = "Delegates Checked/Voted"
     For x = 1 To i
     b = 15 + x
+        'Subdistrict = Precinctname'
         Subdistrict = Sheet1.Cells(b, 2).Value
         MembersPresent = Sheet1.Cells(b, 6).Value
         ActiveSheet.Cells(CandidateCount + 3, x + 1).Formula = _
@@ -37,7 +42,7 @@ Sub Button_Click()
     Next m
     For a = 2 To CandidateCount + 1
         ActiveSheet.Cells(a, i + 2).Formula = _
-        "=SUM(" & ActiveSheet.Range(ActiveSheet.Cells(2, 2), ActiveSheet.Cells(2, i + 1)).Address(False, False) & ")"
+        "=SUM(" & ActiveSheet.Range(ActiveSheet.Cells(a, 2), ActiveSheet.Cells(2, i + 1)).Address(False, False) & ")"
     Next a
     StartWeight = 1 + (CandidateCount + 5)
     For x = 1 To i
@@ -62,7 +67,7 @@ Sub Button_Click()
     For a = StartWeight + 2 To CandidateCount + StartWeight + 1
         ActiveSheet.Cells(a, i + 2).BorderAround xlContinuous, xlThin
         ActiveSheet.Cells(a, i + 2).Formula = _
-        "=SUM(" & ActiveSheet.Range(ActiveSheet.Cells(StartWeight + 2, 2), ActiveSheet.Cells(StartWeight + 2, i + 1)).Address(False, False) & ")"
+        "=SUM(" & ActiveSheet.Range(ActiveSheet.Cells(a, 2), ActiveSheet.Cells(a, i + 1)).Address(False, False) & ")"
     Next a
     For x = 1 To i + 2
         For b = 1 To CandidateCount + 3:
@@ -75,3 +80,5 @@ Sub Button_Click()
     End With
     ActiveSheet.Range("B1:Z1").Columns.AutoFit
 End Sub
+
+
